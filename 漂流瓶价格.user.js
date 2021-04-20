@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         漂流瓶价格
 // @namespace    https://hkfoggyu.github.io/
-// @version      0.1
+// @version      0.2
 // @description  显示漂流瓶每个瓶子的总重和价格(单件物品的瓶子无法显示)
 // @author       Young
 // @supportURL   https://github.com/HKFoggyU/USTscripts
@@ -32,8 +32,7 @@ function calcWeightAndPrice(bottleNum) {
         }
     }
     var totalWeight = total.toFixed(1);
-    var totalPriceTemp = ((total.toFixed(1)-1)*7+12.5).toFixed(1);
-    var totalPrice = totalPriceTemp>12.5 ? totalPriceTemp : 0;
+    var totalPrice = totalWeight>1.0 ? Math.ceil((totalWeight-1)/0.5)*3.5+12.5 : 12.5;
     return [totalWeight, totalPrice];
 }
 
