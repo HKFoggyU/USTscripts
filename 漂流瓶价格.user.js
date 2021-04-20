@@ -45,10 +45,10 @@ function calcWeightAndPrice(bottleNum) {
         var bottleNum = bottle.innerText;
         var [totalWeight, totalPrice] = calcWeightAndPrice(bottleNum);
         var outputText = `${bottle.innerText} (${totalWeight} kg, ${totalPrice} HKD)`;
-        console.log(outputText);
+        //console.log(outputText);
         bottle.innerText=outputText;
 
-        var outputStr = `漂流瓶编号: ${bottleNum}\n总重: ${totalWeight} kg.\n总价: ${totalPrice} HKD.`;
+        //var outputStr = `漂流瓶编号: ${bottleNum}\n总重: ${totalWeight} kg.\n总价: ${totalPrice} HKD.`;
         //console.log(outputStr);
         //window.alert(outputStr);
     }
