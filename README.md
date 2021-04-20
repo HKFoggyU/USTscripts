@@ -10,4 +10,4 @@ Some useful (maybe) scripts for ust students
 
 Display total weight and price under the bottle number.
 
-![漂流瓶价格](https://user-images.githubusercontent.com/19162282/115347862-83283d80-a1e4-11eb-9dff-d58c0ee94590.png)
+![漂流瓶价格](https://user-images.githubusercontent.com/19162282/115349308-49f0cd00-a1e6-11eb-8a1d-833859b430ff.png)
