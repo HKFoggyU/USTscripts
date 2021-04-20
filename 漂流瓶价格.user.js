@@ -5,6 +5,8 @@
 // @description  显示漂流瓶每个瓶子的总重和价格(单件物品的瓶子无法显示)
 // @author       Young
 // @supportURL   https://github.com/HKFoggyU/USTscripts
+// @updateURL    https://github.com/HKFoggyU/USTscripts/raw/main/%E6%BC%82%E6%B5%81%E7%93%B6%E4%BB%B7%E6%A0%BC.user.js
+// @doanloadURL  https://github.com/HKFoggyU/USTscripts/raw/main/%E6%BC%82%E6%B5%81%E7%93%B6%E4%BB%B7%E6%A0%BC.user.js
 // @match        http://www.piaoliuhk.com/packageList.php
 // @icon         http://www.piaoliuhk.com/css/images/favicon.ico
 // @grant        none
@@ -32,8 +34,9 @@ function calcWeightAndPrice(bottleNum) {
         }
     }
     var totalWeight = total.toFixed(1);
-    var totalPrice = totalWeight>1.0 ? Math.ceil((totalWeight-1)/0.5)*3.5+12.5 : 12.5;
-    return [totalWeight, totalPrice];
+    var totalPriceHKD = totalWeight>1.0 ? Math.ceil((totalWeight-1)/0.5)*3.5+12.5 : 12.5;
+    var totalPriceCNY = totalWeight>1.0 ? Math.ceil((totalWeight-1)/0.5)*3.2+11.4 : 11.4;
+    return [totalWeight, totalPriceHKD, totalPriceCNY];
 }
 
 (function() {
@@ -42,12 +45,12 @@ function calcWeightAndPrice(bottleNum) {
     for (var i=0; i<bottles.length; i++) {
         var bottle = bottles[i];
         var bottleNum = bottle.innerText;
-        var [totalWeight, totalPrice] = calcWeightAndPrice(bottleNum);
-        var outputText = `${bottle.innerText} (${totalWeight} kg, ${totalPrice} HKD)`;
+        var [totalWeight, totalPriceHKD, totalPriceCNY] = calcWeightAndPrice(bottleNum);
+        var outputText = `${bottle.innerText} (${totalWeight} kg, ${totalPriceHKD} HKD, ${totalPriceCNY} CNY)`;
         //console.log(outputText);
         bottle.innerText=outputText;
 
-        //var outputStr = `漂流瓶编号: ${bottleNum}\n总重: ${totalWeight} kg.\n总价: ${totalPrice} HKD.`;
+        //var outputStr = `漂流瓶编号: ${bottleNum}\n总重: ${totalWeight} kg.\n总价: ${totalPriceHKD} HKD.`;
         //console.log(outputStr);
         //window.alert(outputStr);
     }
