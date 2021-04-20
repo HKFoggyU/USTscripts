@@ -35,8 +35,8 @@ function calcWeightAndPrice(bottleNum) {
         }
     }
     var totalWeight = total.toFixed(1);
-    var totalPriceHKD = totalWeight>1.0 ? Math.ceil((totalWeight-1)/0.5)*3.5+12.5 : 12.5;
-    var totalPriceCNY = totalWeight>1.0 ? Math.ceil((totalWeight-1)/0.5)*3.2+11.4 : 11.4;
+    var totalPriceHKD = totalWeight>1.0 ? (Math.ceil((totalWeight-1)/0.5)*3.5+12.5).toFixed(1) : 12.5;
+    var totalPriceCNY = totalWeight>1.0 ? (Math.ceil((totalWeight-1)/0.5)*3.2+11.4).toFixed(1) : 11.4;
     return [totalWeight, totalPriceHKD, totalPriceCNY];
 }
 
