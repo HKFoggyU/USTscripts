@@ -1,15 +1,16 @@
 // ==UserScript==
 // @name         漂流瓶价格
 // @namespace    https://hkfoggyu.github.io/
-// @version      0.3
+// @version      0.4
 // @description  显示漂流瓶每个瓶子的总重和价格(单件物品的瓶子无法显示)
 // @author       Young
 // @supportURL   https://github.com/HKFoggyU/USTscripts
 // @updateURL    https://github.com/HKFoggyU/USTscripts/raw/main/%E6%BC%82%E6%B5%81%E7%93%B6%E4%BB%B7%E6%A0%BC.user.js
-// @doanloadURL  https://github.com/HKFoggyU/USTscripts/raw/main/%E6%BC%82%E6%B5%81%E7%93%B6%E4%BB%B7%E6%A0%BC.user.js
+// @downloadURL  https://github.com/HKFoggyU/USTscripts/raw/main/%E6%BC%82%E6%B5%81%E7%93%B6%E4%BB%B7%E6%A0%BC.user.js
 // @match        http://www.piaoliuhk.com/packageList.php
 // @icon         http://www.piaoliuhk.com/css/images/favicon.ico
 // @grant        none
+// $run-at       document-end
 // ==/UserScript==
 
 function getBottles() {
