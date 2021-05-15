@@ -55,4 +55,5 @@ function calcWeightAndPrice(bottleNum) {
         //console.log(outputStr);
         //window.alert(outputStr);
     }
+    window.scrollTo(0,document.body.scrollHeight);
 })();
