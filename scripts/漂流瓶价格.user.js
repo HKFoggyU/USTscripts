@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         漂流瓶价格
 // @namespace    https://hkfoggyu.github.io/
-// @version      0.4
+// @version      0.5
 // @description  显示漂流瓶每个瓶子的总重和价格(单件物品的瓶子无法显示)
 // @author       Young
 // @supportURL   https://github.com/HKFoggyU/USTscripts
