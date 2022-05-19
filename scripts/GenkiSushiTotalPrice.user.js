@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GenkiSushiTotalPrice
 // @namespace    https://hkfoggyu.github.io/
-// @version      0.3
+// @version      0.4
 // @description  Calculate the total price of Genki Sushi
 // @author       Young
 // @supportURL   https://github.com/HKFoggyU/USTscripts
@@ -23,16 +23,18 @@ function calcTotalPrice() {
     return totalPrice;
 }
 
-(function() {
-    'use strict';
+function displayPrice() {
     var totalPrice = calcTotalPrice();
     var outputText = `Total price: $${totalPrice}`;
-    console.log("[+] "+outputText);
-    var priceTag = document.createElement("p");
-    var priceText = document.createTextNode(outputText);
-    priceTag.appendChild(priceText);
-    var insertTextTag = document.getElementsByClassName("update-time-text")[0];
-    insertTextTag.appendChild(priceTag);
-    console.log("[+] Total price inserted");
+    //try { var rawText = document.getElementsByClassName("update-time-text")[0].children[0].innerText; } catch(error) { console.log("[-] Element DNE."); };
+    try { document.getElementsByClassName("update-time-text")[0].children[0].innerText = outputText; } catch(error) { console.log("[-] Element DNE."); };
+    try { console.log("[+] "+outputText); } catch(error) { console.log("[-] Total Price DNE."); };
+}
+
+(function() {
+    'use strict';
+    //displayPrice();
+    console.log("[+] Started.");
+    setInterval(displayPrice, 1000);
     // Your code here...
 })();
