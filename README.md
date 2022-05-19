@@ -6,7 +6,7 @@ Some useful (maybe) scripts for ust students
 2. Add `` *.user.js `` scripts file into the tampermonkey extension. These scripts are self-explanatory by their names.
 
 ## Demo
-1. 漂流瓶价格
+1. [漂流瓶价格](https://greasyfork.org/zh-CN/scripts/425282-%E6%BC%82%E6%B5%81%E7%93%B6%E4%BB%B7%E6%A0%BC)/[元气寿司价格](https://greasyfork.org/zh-CN/scripts/445243-genkisuotalprice)
 
    Display total weight and price under the bottle number.
    
