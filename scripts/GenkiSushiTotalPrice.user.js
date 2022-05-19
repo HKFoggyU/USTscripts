@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         GenkiSushiTotalPrice
 // @namespace    https://hkfoggyu.github.io/
-// @version      0.2
+// @version      0.3
 // @description  Calculate the total price of Genki Sushi
 // @author       Young
 // @supportURL   https://github.com/HKFoggyU/USTscripts
-// @match        http://https://genki2.order.place/*
+// @match        https://genki2.order.place/*
 // @icon         none
 // @grant        none
 // @license      MIT
