@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         GenkiSushiTotalPrice
 // @namespace    https://hkfoggyu.github.io/
-// @version      0.4
+// @version      0.5
 // @description  Calculate the total price of Genki Sushi
 // @author       Young
 // @supportURL   https://github.com/HKFoggyU/USTscripts
-// @match        https://genki2.order.place/*
+// @match        https://genki*.order.place/*
 // @icon         none
 // @grant        none
 // @license      MIT
@@ -18,7 +18,7 @@ function calcTotalPrice() {
     var dishes = [];
     for (var i=7; i<cols.length; i+=4) {
         //dishes.push(cols[i]);
-        totalPrice += parseFloat(cols[i].childNodes[6].innerText.slice(1))
+        totalPrice += parseFloat(cols[i].childNodes[4].innerText.slice(1))
     }
     return totalPrice;
 }
